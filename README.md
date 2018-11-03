@@ -1,15 +1,22 @@
-# google-translate-api [![Build Status](https://travis-ci.org/matheuss/google-translate-api.svg?branch=master)](https://travis-ci.org/matheuss/google-translate-api) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Coverage Status](https://coveralls.io/repos/github/matheuss/google-translate-api/badge.svg?branch=master)](https://coveralls.io/github/matheuss/google-translate-api?branch=master) [![Known Vulnerabilities](https://snyk.io/test/npm/google-translate-api/badge.svg)](https://snyk.io/test/npm/google-translate-api)
+# google-translate-api
+To serve Google Translate API for applications. (forked from [matheuss/google-translate-api](https://github.com/matheuss/google-translate-api))
 
-A **free** and **unlimited** API for Google Translate :dollar::no_entry_sign:
-
-## Features 
+## Features
 
 - Auto language detection
 - Spelling correction
-- Language correction 
+- Language correction
 - Fast and reliable – it uses the same servers that [translate.google.com](https://translate.google.com) uses
 
-## Install 
+## Updates
+
+**Why this is created and why this is available.**
+
+- Added *user-agent* header to HTTP request.
+- Fixed variable values. ([Patch](https://github.com/matheuss/google-translate-api/issues/79))
+- Removed vulnerability dependency. ([Patch](https://github.com/matheuss/google-translate-api/pull/71))
+
+## Install
 
 ```
 npm install --save google-translate-api
@@ -129,5 +136,11 @@ Otherwise, it will be an empty `string` (`''`).
 - [`vertaler`](https://github.com/matheuss/vertaler) – CLI for this module
 
 ## License
+
+### Current
+
+MIT @ [Seia-Soto](https://github.com/seia-soto)
+
+### Original
 
 MIT © [Matheus Fernandes](http://matheus.top)
