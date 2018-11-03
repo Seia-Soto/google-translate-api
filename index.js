@@ -1,7 +1,6 @@
 var querystring = require('querystring');
 
 var got = require('got');
-var safeEval = require('safe-eval');
 var token = require('google-translate-token');
 
 var languages = require('./languages');
@@ -32,7 +31,7 @@ function translate(text, opts) {
     return token.get(text).then(function (token) {
         var url = 'https://translate.google.com/translate_a/single';
         var data = {
-            client: 't',
+            client: 'gtx',
             sl: opts.from,
             tl: opts.to,
             hl: opts.to,
@@ -49,7 +48,11 @@ function translate(text, opts) {
 
         return url + '?' + querystring.stringify(data);
     }).then(function (url) {
-        return got(url).then(function (res) {
+        return got(url, {
+          headers: {
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+          }
+        }).then(function (res) {
             var result = {
                 text: '',
                 from: {
@@ -70,7 +73,7 @@ function translate(text, opts) {
                 result.raw = res.body;
             }
 
-            var body = safeEval(res.body);
+            var body = JSON.parse(res.body);
             body[0].forEach(function (obj) {
                 if (obj[0]) {
                     result.text += obj[0];
