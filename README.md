@@ -19,7 +19,7 @@ To serve Google Translate API for applications. (forked from [matheuss/google-tr
 ## Install
 
 ```
-npm install --save google-translate-api
+npm install --save google-translate-query
 ```
 
 ## Usage
