@@ -45,6 +45,7 @@ var langs = {
     'ha': 'Hausa',
     'haw': 'Hawaiian',
     'iw': 'Hebrew',
+    'he': 'Hebrew',
     'hi': 'Hindi',
     'hmn': 'Hmong',
     'hu': 'Hungarian',

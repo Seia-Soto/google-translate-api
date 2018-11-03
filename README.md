@@ -1,4 +1,4 @@
-# google-translate-api
+# google-translate-query
 To serve Google Translate API for applications. (forked from [matheuss/google-translate-api](https://github.com/matheuss/google-translate-api))
 
 ## Features
@@ -15,6 +15,7 @@ To serve Google Translate API for applications. (forked from [matheuss/google-tr
 - Added *user-agent* header to HTTP request.
 - Fixed variable values. ([Patch](https://github.com/matheuss/google-translate-api/issues/79))
 - Removed vulnerability dependency. ([Patch](https://github.com/matheuss/google-translate-api/pull/71))
+- Updated the language code. ([Patch](https://github.com/matheuss/google-translate-api/issues/59))
 
 ## Install
 
@@ -27,7 +28,7 @@ npm install --save google-translate-query
 From automatic language detection to English:
 
 ``` js
-const translate = require('google-translate-api');
+const translate = require('google-translate-query');
 
 translate('Ik spreek Engels', {to: 'en'}).then(res => {
     console.log(res.text);
