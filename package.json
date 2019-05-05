@@ -1,6 +1,6 @@
 {
   "name": "google-translate-query",
-  "version": "2.4.4",
+  "version": "2.5.0",
   "description": "A free and unlimited API for Google Translate",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/seia-soto/google-translate-query#readme",
   "dependencies": {
     "google-translate-token": "latest",
-    "got": "^9.3.1"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   }
 }
